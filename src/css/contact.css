@@ -1,0 +1,69 @@
+.contact {
+  background-color: black;
+  text-align: center;
+  padding: 40px;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+
+.contact div {
+  margin: auto;
+  width: 900px;
+  text-align: center;
+}
+
+.contact input,
+.contact textarea {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #171717;
+  border: 10px solid #171717;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #bdbdbd;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  color: white;
+}
+
+.name-input {
+  width: 400px;
+  margin: 10px;
+}
+
+.email-input {
+  width: 400px;
+  margin: 10px;
+}
+
+.message-input {
+  width: 100%;
+  max-width: 844px; /* Set a maximum width */
+  margin: 10px;
+  height: 100px; /* Initial height */
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: 4px solid white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  float: right; /* Move the button to the right side */
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.contact button:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}

@@ -1,0 +1,9 @@
+.content {
+  text-align: left;
+  padding: 40px;
+}
+
+.content h1 {
+  font-weight: 600;
+  text-align: left;
+}
