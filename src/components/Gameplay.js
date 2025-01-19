@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/gameplay.css";
-import logo from "../images/TaglientGamesLogo.png";
+import logo from "../images/Logo/TaglientGamesLogo.png";
 
 export default function Gameplay() {
   return (

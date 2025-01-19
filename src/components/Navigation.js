@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../css/navigation.css";
-import logo from "../images/TaglientGamesLogo_White.png";
+import logo from "../images/Logo/TaglientGamesLogo_White.png";
 
 export default function Navigation() {
   useEffect(() => {

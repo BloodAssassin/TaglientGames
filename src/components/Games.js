@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/games.css";
-import svarog from "../images/Hades2.webp";
-import paperSharp from "../images/Hades2.webp";
+import svarog from "../images/Svarog/Svarog-cover.jpg";
+import paperSharp from "../images/PaperSharp/PaperSharp-Cover.jpg";
 
 export default function Content() {
   return (
@@ -9,27 +9,33 @@ export default function Content() {
       <div className="content">
         <h1>Our Games</h1>
       </div>
-      <div className="game-container">
+      <div id="svarog-container" className="game-container">
         <img className="game-image" alt="svarog-image" src={svarog} />
         <div className="game-info">
-          <h2 className="game-title">Svarog</h2>
+          <h2 className="game-title">SVAROG</h2>
           <p className="game-desc">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Lobortis proin
-            per potenti at class tellus laoreet. Mus enim leo primis elit hac.
-            Class litora mauris class; est primis arcu. Risus augue montes lacus
-            nullam odio dui placerat. Conubia
+            Imagine a world where the whispers of{" "}
+            <b className="highlight">slavic gods</b> echo through forgotten
+            forests, where eerie creatures from old folktales lurk in the
+            shadows, and where every step you take is a journey deeper into the
+            heart of a forgotten <b className="highlight">mythology</b>. In{" "}
+            <b className="highlight">SVAROG</b>, you'll be thrust into this
+            hauntingly beautiful world, where danger and discovery await at
+            every turn.
           </p>
         </div>
       </div>
-      <div className="game-container">
+      <div id="papersharp-container" className="game-container">
         <img className="game-image" alt="paper-sharp-image" src={paperSharp} />
         <div className="game-info">
           <h2 className="game-title">Paper Sharp</h2>
           <p className="game-desc">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Lobortis proin
-            per potenti at class tellus laoreet. Mus enim leo primis elit hac.
-            Class litora mauris class; est primis arcu. Risus augue montes lacus
-            nullam odio dui placerat. Conubia
+            A mathematical-historical educational video game set in the{" "}
+            <b className="highlight">17th century Italy</b>. The game is based
+            on the real historical figure{" "}
+            <b className="highlight">Antonio Maria del Fiore</b>, a student of
+            <b className="highlight"> Scipione del Ferro</b>, who invented the
+            first cubic equation.
           </p>
         </div>
       </div>

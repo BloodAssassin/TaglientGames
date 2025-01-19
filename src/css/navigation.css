@@ -3,8 +3,8 @@
 body {
   background-color: #171717;
   color: #f6f6f6;
-
   font-family: "Lato", serif;
+  /* zoom: 0.8; */
 }
 
 html {
@@ -23,20 +23,20 @@ html {
   background-color: #171717;
   z-index: 1000;
   transition: top 0.5s; /* Smooth transition for sliding effect */
-  height: 60px;
+  height: 70px;
   filter: drop-shadow(0px 5px 40px rgb(0, 0, 0));
 }
 
 .logo {
   float: left;
-  height: 30px;
-  line-height: 60px;
+  height: 40px;
+  line-height: 70px;
   padding: 15px;
   margin-left: 100px;
 }
 
 .logo:hover {
-  content: url("../images/TaglientGamesLogo.png");
+  content: url("../images/Logo/TaglientGamesLogo.png");
 }
 
 .navigation ul {
@@ -55,11 +55,12 @@ html {
 
 .navigation ul li a {
   display: block;
-  padding: 0 20px;
+  padding: 0 22px;
   height: 100%;
-  line-height: 60px;
+  line-height: 70px;
   color: white;
   font-weight: 900;
+  font-size: 17px;
   font-style: normal;
   text-decoration: none;
 }

@@ -1,12 +1,21 @@
 .game-container {
   display: flex;
   align-items: flex-start; /* Align items to the top */
-  padding: 50px 150px 50px 150px;
+  padding: 50px 120px 50px 120px;
   text-align: left;
-  background-image: url("https://assetsio.gnwcdn.com/hades-2-key-art-melinoe.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp");
   background-size: cover;
   background-position: center;
   position: relative; /* Ensure the overlay is positioned correctly */
+}
+
+#svarog-container {
+  background-image: url("../images/Svarog/RiverSpiritEntrance.jpg");
+  background-position: center;
+}
+
+#papersharp-container {
+  background-image: url("../images/PaperSharp/Workshop.jpg");
+  background-position: center bottom;
 }
 
 .game-container::before {
@@ -21,8 +30,9 @@
 }
 
 .game-image {
-  width: 250px;
+  width: 260px;
   margin-right: 20px;
+  border-radius: 5px;
   z-index: 2; /* Ensure the image is above the overlay */
 }
 
@@ -32,12 +42,12 @@
 }
 
 .game-title {
-  margin-top: 20px;
-  font-size: 36px;
+  margin-top: 18px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 .game-desc {
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 10px;
 }

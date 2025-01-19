@@ -1,0 +1,118 @@
+.about p {
+  font-size: 20px;
+}
+
+.about p,
+.about h2 {
+  filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
+}
+
+.us {
+  background: #171717;
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: -40px;
+  padding: 40px;
+}
+
+.about {
+  background-image: url("../images/Team/Founders.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 23, 23, 0.65);
+  z-index: 1;
+}
+
+.about > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about img {
+  width: 400px;
+  border-radius: 5px;
+  transition: filter 0.5s ease;
+  filter: blur(0px) brightness(1) drop-shadow(0px 5px 30px rgb(0, 0, 0));
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.team-member {
+  position: relative;
+  display: inline-block;
+}
+
+.team-member img {
+  display: block;
+  border-radius: 5px;
+  transition: filter 0.5s ease; /* Smooth transition for the blur and darkening effect */
+}
+
+.team-member:hover img {
+  filter: blur(1px) brightness(0.8) drop-shadow(0px 5px 30px rgb(0, 0, 0)); /* Apply blur, darkening, and drop shadow */
+}
+
+.team-info {
+  position: absolute;
+  bottom: -20px; /* Adjust the initial position to be lower */
+  left: 10px;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
+  padding: 10px;
+  transition: bottom 0.5s ease; /* Smooth transition for moving up */
+  height: 100px; /* Set a fixed height */
+}
+
+.team-info h1 {
+  margin: 0;
+  font-size: 30px;
+  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.team-info p {
+  margin: 5px 0 0;
+  font-size: 20px;
+  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.team-info .additional-text {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  transform: translateY(10px);
+  transition: visibility 0.5s, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.team-member:hover .team-info {
+  bottom: 10px;
+}
+
+.team-member:hover .additional-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-member:hover .team-info h1,
+.team-member:hover .team-info p {
+  transform: translateY(-20px);
+  opacity: 1;
+}
