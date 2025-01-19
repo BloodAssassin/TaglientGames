@@ -4,7 +4,7 @@ body {
   background-color: #171717;
   color: #f6f6f6;
   font-family: "Lato", serif;
-  /* zoom: 0.8; */
+  zoom: 0.9;
 }
 
 html {
@@ -17,6 +17,7 @@ html {
 }
 
 .navigation {
+  zoom: 1.12;
   position: fixed;
   top: 0;
   width: 100%;
