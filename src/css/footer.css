@@ -1,5 +1,5 @@
 .footer {
-  background-color: #ef5f10;
+  background-color: #ef5a0a;
   color: #171717;
   font-size: larger;
   font-weight: 700;
@@ -11,12 +11,6 @@
   box-sizing: border-box;
   padding-left: 40px;
   padding-bottom: 80px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(239, 95, 16) 10%,
-    rgba(239, 94, 16, 0.8) 100%
-  );
 }
 
 .footer img {
