@@ -12,9 +12,7 @@ export default function Footer() {
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
-        <br />
-        <br /> <img src={logo} />
-        <br />
+        <img src={logo} />
         <p>www.taglientgames.com</p>
         <p>
           This website is managed by a team of individuals and is not affiliated

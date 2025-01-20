@@ -21,6 +21,8 @@
 
 .footer img {
   width: 150px;
+  margin-top: 35px;
+  margin-bottom: 20px;
   filter: invert(1) sepia(17%) saturate(21%) hue-rotate(344deg) brightness(96%)
     contrast(82%);
 }
