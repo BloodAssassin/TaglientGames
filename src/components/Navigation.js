@@ -4,17 +4,15 @@ import logo from "../images/Logo/TaglientGamesLogo_White.png";
 
 export default function Navigation() {
   useEffect(() => {
-    let lastScrollTop = 0;
     const navbar = document.querySelector(".navigation");
 
     window.addEventListener("scroll", () => {
       const scrollTop = document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        navbar.style.top = "-100px"; // Adjust as needed to hide the navbar
-      } else {
+      if (scrollTop < 50) {
         navbar.style.top = "0";
+      } else {
+        navbar.style.top = "-100px";
       }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 
     return () => {

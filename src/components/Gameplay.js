@@ -7,10 +7,12 @@ export default function Gameplay() {
     <div>
       <div className="video-container">
         <video autoPlay loop muted playsInline className="background-video">
-          <source src={require("../videos/Hades.mp4")} type="video/mp4" />
+          <source
+            src={require("../videos/RiverSpirit Entrance.mp4")}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
-        <div className="video-overlay"></div>
       </div>
       <div className="index-content">
         <img src={logo} alt="Taglient Games Logo" />

@@ -27,7 +27,7 @@ export default function Footer() {
             <img src={milos_ristic} />
             <div className="team-info">
               <h1>Milos Ristic</h1>
-              <p>Programmer | Lead Artist | Lead Designer</p>
+              <p>Programmer | Lead Artist</p>
               <p className="additional-text">
                 Milos is the creative force behind our art and design.
               </p>
@@ -48,9 +48,9 @@ export default function Footer() {
             <img src={stefan_jovcic} />
             <div className="team-info">
               <h1>Stefan Jovcic</h1>
-              <p>Community Manager | PR and Marketing</p>
+              <p>Marketing and PR</p>
               <p className="additional-text">
-                Stefan connects us with our community and manages our PR.
+                Stefan manages our PR and marekting.
               </p>
             </div>
           </div>
