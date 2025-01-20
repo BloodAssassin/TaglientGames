@@ -24,6 +24,7 @@ export default function Footer() {
         </p>
         <div className="team">
           <div className="team-member">
+            <div id="milos" className="gradient-overlay"></div>
             <img src={milos_ristic} />
             <div className="team-info">
               <h1>Milos Ristic</h1>
@@ -34,6 +35,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="team-member">
+            <div id="luka" className="gradient-overlay"></div>
             <img src={luka_pavicevic} />
             <div className="team-info">
               <h1>Luka Pavicevic</h1>
@@ -45,6 +47,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="team-member">
+            <div id="stefan" className="gradient-overlay"></div>
             <img src={stefan_jovcic} />
             <div className="team-info">
               <h1>Stefan Jovcic</h1>

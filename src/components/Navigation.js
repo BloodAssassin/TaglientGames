@@ -6,6 +6,7 @@ export default function Navigation() {
   useEffect(() => {
     const navbar = document.querySelector(".navigation");
 
+    // Hide the navigation bar when not on top of the page
     window.addEventListener("scroll", () => {
       const scrollTop = document.documentElement.scrollTop;
       if (scrollTop < 50) {
