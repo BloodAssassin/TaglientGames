@@ -6,12 +6,6 @@ const app = express();
 const email = process.env.EMAIL;
 const password = process.env.PASSWORD;
 
-app.use(
-  cors({
-    origin: "https://taglient-games-client.vercel.app", // Allow specific origin
-  })
-);
-
 // Serve the root directory page
 app.get("/", (req, res) => {
   res.send(
