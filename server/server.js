@@ -56,6 +56,11 @@ app.post("/api/contact", async (req, res) => {
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../client/build")));
 
+// Serve the favicon.ico file
+app.get("/favicon.ico", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "favicon.ico"));
+});
+
 // Serve the root directory page
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
