@@ -41,6 +41,13 @@ async function contact(user_name, user_email, user_message) {
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/api/contact", async (req, res) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://taglient-games-client.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
   const { user_name, user_email, user_message } = req.body;
   try {
     await contact(user_name, user_email, user_message);
