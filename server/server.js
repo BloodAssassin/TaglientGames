@@ -41,12 +41,12 @@ async function contact(user_name, user_email, user_message) {
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/api/contact", async (req, res) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://taglient-games-client.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  // res.setHeader(
+  //   "Access-Control-Allow-Origin",
+  //   "https://taglient-games-client.vercel.app"
+  // );
+  // res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  // res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   // Handle preflight requests
   if (req.method === "OPTIONS") {
@@ -69,11 +69,6 @@ app.get("/", (req, res) => {
   res.send(
     "<h1>Welcome to Taglient Games</h1><p>This is the root directory page.</p>"
   );
-});
-
-// Middleware to handle 404 errors
-app.use((req, res, next) => {
-  res.status(404).send("Sorry, that route doesn't exist.");
 });
 
 // Listen for calls
