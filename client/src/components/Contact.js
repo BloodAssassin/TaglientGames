@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "../css/contact.css";
 
 export default function Footer() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [user_name, setName] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [user_message, setMessage] = useState("");
 
+  // Expand textarea during input
   const handleInput = (event) => {
     const textarea = event.target;
     textarea.style.height = "auto";
@@ -13,15 +14,36 @@ export default function Footer() {
     setMessage(textarea.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+  // Submit contact form
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
     // Clear the form
     setName("");
     setEmail("");
     setMessage("");
+
     // Reset textarea height
     const textarea = document.querySelector(".message-input");
     textarea.style.height = "100px";
+
+    // Send the message to backend
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user_name, user_email, user_message }),
+      });
+      if (response.ok) {
+        alert("Message sent successfully");
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
   };
 
   return (
@@ -32,21 +54,22 @@ export default function Footer() {
           type="text"
           placeholder="Name"
           className="name-input"
-          value={name}
+          value={user_name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
           placeholder="Email"
           className="email-input"
-          value={email}
+          value={user_email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Message"
           className="message-input"
-          value={message}
+          value={user_message}
           onInput={handleInput}
+          onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <button type="submit">Send</button>
       </div>
