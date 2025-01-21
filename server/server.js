@@ -1,7 +1,11 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
-const { email, password } = require("./config");
 const app = express();
+
+const email = process.env.EMAIL;
+const password = process.env.PASSWORD;
+
+console.log(email);
 
 async function contact(user_name, user_email, user_message) {
   // Create the message

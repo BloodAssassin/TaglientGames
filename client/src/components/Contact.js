@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "../css/contact.css";
 
-console.log("Email:", email); // Log the email to verify
-console.log("Password:", password); // Log the password to verify
-
 export default function Footer() {
   const [user_name, setName] = useState("");
   const [user_email, setEmail] = useState("");
