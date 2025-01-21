@@ -64,6 +64,7 @@ app.use((req, res, next) => {
 });
 
 // Listen for calls
-app.listen(5000, () => {
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
   console.log("Server started on port 5000");
 });
