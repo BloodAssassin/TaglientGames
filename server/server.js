@@ -6,7 +6,11 @@ const app = express();
 const email = process.env.EMAIL;
 const password = process.env.PASSWORD;
 
-console.log(email);
+app.use(
+  cors({
+    origin: "https://taglient-games-client.vercel.app", // Allow specific origin
+  })
+);
 
 async function contact(user_name, user_email, user_message) {
   // Create the message
