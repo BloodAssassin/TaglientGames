@@ -1,5 +1,6 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
+const path = require("path");
 const app = express();
 
 const email = process.env.EMAIL;
@@ -52,15 +53,24 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+// Handle all GET requests by serving the React app
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
+
+// Middleware to handle 404 errors
+app.use((req, res, next) => {
+  res.status(404).send("Sorry, that route doesn't exist.");
+});
+
 // Listen for calls
 app.listen(5000, () => {
   console.log("Server started on port 5000");
-});
-
-app.get("/", (req, res) => {
-  res.send("<h1>Home page</h1>");
-});
-
-app.all("*", (req, res) => {
-  res.status(404).send("<h1>404! Page not found</h1>");
 });
