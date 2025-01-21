@@ -29,13 +29,16 @@ export default function Footer() {
 
     // Send the message to backend
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ user_name, user_email, user_message }),
-      });
+      const response = await fetch(
+        "https://taglient-games-server-g52y2lyv0-taglient-games.vercel.app/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ user_name, user_email, user_message }),
+        }
+      );
       if (response.ok) {
         alert("Message sent successfully");
       } else {
