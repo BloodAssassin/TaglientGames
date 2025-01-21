@@ -45,7 +45,7 @@ app.post("/api/contact", async (req, res) => {
     "Access-Control-Allow-Origin",
     "https://taglient-games-client.vercel.app"
   );
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   const { user_name, user_email, user_message } = req.body;
