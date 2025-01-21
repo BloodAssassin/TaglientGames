@@ -56,6 +56,11 @@ app.post("/api/contact", async (req, res) => {
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../client/build")));
 
+// Serve the root directory page
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+
 // Handle all GET requests by serving the React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"), (err) => {
