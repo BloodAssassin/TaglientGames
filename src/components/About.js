@@ -16,47 +16,63 @@ export default function Footer() {
       </div>
       <br />
       <div className="founders">
-        <h2>Founders</h2>
+        <h1>Founders</h1>
         <p>
           We established <b className="highlight_blue">Taglient</b>{" "}
           <b className="highlight">Games</b> in pursuit of our dream to create
           amazing indie games that people will enjoy.
         </p>
         <div className="team">
-          <div className="team-member">
-            <div id="milos" className="gradient-overlay"></div>
-            <img src={milos_ristic} />
-            <div className="team-info">
-              <h1>Milos Ristic</h1>
-              <p>Programmer | Lead Artist</p>
-              <p className="additional-text">
-                Milos is the creative force behind our art and design.
-              </p>
+          <a
+            href="https://www.linkedin.com/in/milos-ristic-a61132242/"
+            target="_blank"
+          >
+            <div id="milos" className="team-member">
+              <div className="gradient-overlay"></div>
+              <img src={milos_ristic} />
+              <div className="team-info">
+                <h1>Milos Ristic</h1>
+                <p>Programmer | Lead Artist</p>
+                <p className="additional-text">
+                  Milos is the creative force behind our art and design.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="team-member">
-            <div id="luka" className="gradient-overlay"></div>
-            <img src={luka_pavicevic} />
-            <div className="team-info">
-              <h1>Luka Pavicevic</h1>
-              <p>Lead Programmer | Concept Artist</p>
-              <p className="additional-text">
-                Luka ensures our code is clean and efficient. He is also a
-                talented concept artist.
-              </p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/luka-pavi%C4%87evi%C4%87-2bb44b310/"
+            target="_blank"
+          >
+            <div id="luka" className="team-member">
+              <div className="gradient-overlay"></div>
+              <img src={luka_pavicevic} />
+              <div className="team-info">
+                <h1>Luka Pavicevic</h1>
+                <p>Lead Programmer | Concept Artist</p>
+                <p className="additional-text">
+                  Luka ensures our code is clean and efficient. He is also a
+                  talented concept artist.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="team-member">
-            <div id="stefan" className="gradient-overlay"></div>
-            <img src={stefan_jovcic} />
-            <div className="team-info">
-              <h1>Stefan Jovcic</h1>
-              <p>Marketing and PR</p>
-              <p className="additional-text">
-                Stefan manages our PR and marekting.
-              </p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/stefan-jov%C4%8Di%C4%87-287809313/"
+            target="_blank"
+          >
+            <div id="stefan" className="team-member">
+              <div className="gradient-overlay"></div>
+              <img src={stefan_jovcic} />
+              <div className="team-info">
+                <h1>Stefan Jovcic</h1>
+                <p>Community Manager</p>
+                <p className="additional-text">
+                  Stefan connects with our community and sometimes jumps in for
+                  additional programming.
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

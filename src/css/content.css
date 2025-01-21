@@ -1,19 +1,24 @@
 .content {
   text-align: left;
+  font-weight: 800;
   padding: 40px;
 }
 
 .content h1 {
-  font-weight: 600;
+  font-weight: 800;
   text-align: left;
+}
+
+.content p {
+  font-weight: 600;
 }
 
 .highlight {
   color: #ef5f10;
-  font-weight: 900;
+  font-weight: 1000;
 }
 
 .highlight_blue {
   color: #0c97de;
-  font-weight: 900;
+  font-weight: 1000;
 }

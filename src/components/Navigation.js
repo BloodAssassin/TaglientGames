@@ -21,23 +21,44 @@ export default function Navigation() {
     };
   }, []);
 
+  const handleLinkClick = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    if (targetId === "") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav className="navigation">
-      <a href="#">
+      <a href="#" onClick={handleLinkClick}>
         <img src={logo} alt="Taglient Games Logo" className="logo" />
       </a>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="#" onClick={handleLinkClick}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#games">Games</a>
+          <a href="#games" onClick={handleLinkClick}>
+            Games
+          </a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" onClick={handleLinkClick}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" onClick={handleLinkClick}>
+            Contact
+          </a>
         </li>
       </ul>
     </nav>

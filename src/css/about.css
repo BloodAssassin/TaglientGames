@@ -95,7 +95,7 @@
   );
 } */
 
-#milos:hover {
+#milos .gradient-overlay:hover {
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 0) 20%,
@@ -103,7 +103,7 @@
   );
 }
 
-#luka:hover {
+#luka .gradient-overlay:hover {
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 0) 20%,
@@ -111,7 +111,7 @@
   );
 }
 
-#stefan:hover {
+#stefan .gradient-overlay:hover {
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 0) 20%,
@@ -150,7 +150,8 @@
   visibility: hidden;
   opacity: 0;
   margin-top: 10px;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 20px;
   transform: translateY(10px);
   transition: visibility 0.5s, opacity 0.5s ease, transform 0.5s ease;
 }
@@ -159,14 +160,23 @@
   bottom: 10px;
 }
 
-.team-member:hover .additional-text {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .team-member:hover .team-info h1,
 .team-member:hover .team-info p {
-  transform: translateY(-20px);
   opacity: 1;
+  visibility: visible;
+}
+
+#milos:hover .team-info h1,
+#milos:hover .team-info p {
+  transform: translateY(-30px);
+}
+
+#luka:hover .team-info h1,
+#luka:hover .team-info p {
+  transform: translateY(-55px);
+}
+
+#stefan:hover .team-info h1,
+#stefan:hover .team-info p {
+  transform: translateY(-55px);
 }

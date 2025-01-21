@@ -7,13 +7,18 @@ body {
   align-items: flex-start;
   padding: 50px 120px 50px 120px;
   text-align: left;
+  font-weight: 600;
   background-size: cover;
   background-position: center;
   position: relative;
   transition: transform 0.5s ease; /* Add transition for smooth effect */
   overflow: hidden; /* Prevent overflow from scaling */
   max-width: 100vw; /* Prevent exceeding page width */
-  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .game-container:hover::before {
