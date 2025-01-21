@@ -30,7 +30,7 @@ export default function Footer() {
     // Send the message to backend
     try {
       const response = await fetch(
-        "https://taglient-games-server-g52y2lyv0-taglient-games.vercel.app/api/contact",
+        "https://taglient-games-server.vercel.app/api/contact",
         {
           method: "POST",
           headers: {
