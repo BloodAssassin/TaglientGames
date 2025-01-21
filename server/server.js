@@ -54,20 +54,11 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // Serve the root directory page
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-// Handle all GET requests by serving the React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"), (err) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
 });
 
 // Middleware to handle 404 errors
