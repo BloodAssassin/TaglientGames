@@ -7,11 +7,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "./server.js",
-      "methods": ["POST"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
+      "dest": "./server.js"
     }
   ],
   "env": {
