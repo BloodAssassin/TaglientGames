@@ -99,7 +99,7 @@ html {
   visibility: hidden;
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   background-color: #171717;
   width: 200px;
   width: 100vw;
