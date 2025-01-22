@@ -30,15 +30,14 @@ a {
   text-decoration: none;
 }
 
-.game-container:hover::before {
-  background: rgba(0, 0, 0, 0.55);
+/* .game-container:hover::before {
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .game-container:hover {
-  transform: scale(1.01); /* Zoom in slightly on hover */
-  filter: drop-shadow(0px 5px 20px rgb(0, 0, 0)); /* Add drop shadow on hover */
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
   z-index: 10;
-}
+} */
 
 #svarog-container {
   background-image: url("../images/Svarog/RiverSpiritEntrance.jpg");
@@ -72,7 +71,7 @@ a {
 .game-info {
   flex: 1;
   z-index: 2;
-  filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 .game-title {
@@ -84,4 +83,32 @@ a {
 .game-desc {
   font-size: 22px;
   margin-top: 10px;
+}
+
+.platforms {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon:hover {
+  color: #fa6161;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(59%) saturate(5076%)
+    hue-rotate(327deg) brightness(105%) contrast(95%);
+}
+
+.icon img {
+  width: 60px;
+  filter: invert(1);
+}
+
+.icon p {
+  margin: 0;
 }
