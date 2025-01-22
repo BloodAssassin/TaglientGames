@@ -15,14 +15,10 @@ export default function Content() {
           <div className="game-info">
             <h2 className="game-title">SVAROG</h2>
             <p className="game-desc">
-              Imagine a world where the whispers of{" "}
-              <b className="highlight">slavic gods</b> echo through forgotten
-              forests, where eerie creatures from old folktales lurk in the
-              shadows, and where every step you take is a journey deeper into
-              the heart of a forgotten <b className="highlight">mythology</b>.
-              In <b className="highlight">SVAROG</b>, you'll be thrust into this
-              hauntingly beautiful world, where danger and discovery await at
-              every turn.
+              Pixel-art metroidvania set in{" "}
+              <b className="highlight">Slavic mythology</b>. Fight your way
+              trough the lands of Javia to reach the Underwold and take down
+              it's god - <b className="highligth">Veles</b>.
             </p>
           </div>
         </div>
@@ -41,7 +37,7 @@ export default function Content() {
               <b className="highlight">17th century Italy</b>. The game is based
               on the real historical figure{" "}
               <b className="highlight">Antonio Maria del Fiore</b>, a student of
-              <b className="highlight"> Scipione del Ferro</b>, who invented the
+              <b className="highlight"> Scipione del Ferro</b> who invented the
               first cubic equation.
             </p>
           </div>

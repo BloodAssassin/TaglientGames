@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.footer-content p {
+  text-align: center;
+}
+
 .footer-links {
   display: flex;
   flex-direction: row;

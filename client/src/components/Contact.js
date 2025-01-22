@@ -51,22 +51,24 @@ export default function Footer() {
 
   return (
     <form id="contact" className="contact" onSubmit={handleSubmit}>
-      <div>
+      <div className="contact-content">
         <h1>Contact Us!</h1>
-        <input
-          type="text"
-          placeholder="Name"
-          className="name-input"
-          value={user_name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          className="email-input"
-          value={user_email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="Name"
+            className="name-input"
+            value={user_name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            className="email-input"
+            value={user_email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
         <textarea
           placeholder="Message"
           className="message-input"

@@ -5,12 +5,25 @@
   margin: auto;
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
-.contact div {
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14px;
+}
+
+.contact-content {
   margin: auto;
-  width: 900px;
+  width: 800px;
   text-align: center;
+}
+
+.contact input {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact input,
@@ -29,23 +42,13 @@
   color: white;
 }
 
-.name-input {
-  width: 400px;
-  margin: 10px;
-}
-
-.email-input {
-  width: 400px;
-  margin: 10px;
-}
-
 .message-input {
-  width: 100%;
-  max-width: 844px; /* Set a maximum width */
-  margin: 10px;
-  height: 100px; /* Initial height */
-  resize: vertical;
+  margin-top: 15px;
+  height: 100px;
   min-height: 100px;
+  width: 100%;
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 .contact button {
@@ -58,8 +61,7 @@
   font-weight: 900;
   cursor: pointer;
   float: right; /* Move the button to the right side */
-  margin-top: 10px;
-  margin-right: 15px;
+  margin-top: 15px;
 }
 
 .contact button:hover {

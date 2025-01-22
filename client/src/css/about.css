@@ -95,6 +95,42 @@
   );
 } */
 
+.team-info {
+  pointer-events: none;
+  position: absolute;
+  bottom: -20px; /* Adjust the initial position to be lower */
+  left: 10px;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
+  padding: 10px;
+  transition: bottom 0.5s ease, transform 0.5s ease;
+  height: 100px; /* Set a fixed height */
+  z-index: 2;
+}
+
+.team-info h1 {
+  margin: 0;
+  font-size: 30px;
+  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.team-info p {
+  margin: 5px 0 0;
+  font-size: 20px;
+  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.team-info .additional-text {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 10px;
+  font-weight: 500;
+  transform: translateY(10px);
+  transition: visibility 0.5s, opacity 0.5s ease, transform 0.5s ease;
+}
+
 #milos .gradient-overlay:hover {
   background: linear-gradient(
     180deg,
@@ -119,43 +155,6 @@
   );
 }
 
-.team-info {
-  pointer-events: none;
-  position: absolute;
-  bottom: -20px; /* Adjust the initial position to be lower */
-  left: 10px;
-  color: rgb(255, 255, 255);
-  filter: drop-shadow(0px 5px 10px rgb(0, 0, 0));
-  padding: 10px;
-  transition: bottom 0.5s ease; /* Smooth transition for moving up */
-  height: 100px; /* Set a fixed height */
-  z-index: 2;
-}
-
-.team-info h1 {
-  margin: 0;
-  font-size: 30px;
-  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.team-info p {
-  margin: 5px 0 0;
-  font-size: 20px;
-  filter: drop-shadow(0px 5px 30px rgb(0, 0, 0));
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.team-info .additional-text {
-  visibility: hidden;
-  opacity: 0;
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 20px;
-  transform: translateY(10px);
-  transition: visibility 0.5s, opacity 0.5s ease, transform 0.5s ease;
-}
-
 .team-member:hover .team-info {
   bottom: 10px;
 }
@@ -166,17 +165,14 @@
   visibility: visible;
 }
 
-#milos:hover .team-info h1,
-#milos:hover .team-info p {
+#milos:hover .team-info {
   transform: translateY(-30px);
 }
 
-#luka:hover .team-info h1,
-#luka:hover .team-info p {
+#luka:hover .team-info {
   transform: translateY(-55px);
 }
 
-#stefan:hover .team-info h1,
-#stefan:hover .team-info p {
+#stefan:hover .team-info {
   transform: translateY(-55px);
 }

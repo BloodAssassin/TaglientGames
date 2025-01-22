@@ -25,16 +25,18 @@ export default function Gameplay() {
       </div>
       <div className="index-content">
         <img src={logo} alt="Taglient Games Logo" />
-        <p>
+        <p className="index-text">
           We are a game development studio that puts{" "}
           <b className="highlight">ART</b> first!
         </p>
-        <a href="#games" onClick={handleLinkClick}>
-          <button className="index-button games-button">Games</button>
-        </a>
-        <a href="#about" onClick={handleLinkClick}>
-          <button className="index-button people-button">People</button>
-        </a>
+        <div className="buttons">
+          <a href="#games" onClick={handleLinkClick}>
+            <button className="index-button games-button">Games</button>
+          </a>
+          <a href="#about" onClick={handleLinkClick}>
+            <button className="index-button people-button">People</button>
+          </a>
+        </div>
       </div>
     </div>
   );
