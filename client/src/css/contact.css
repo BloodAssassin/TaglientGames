@@ -1,7 +1,8 @@
 .contact {
   background-color: black;
   text-align: center;
-  padding: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: auto;
   position: relative;
   display: flex;
