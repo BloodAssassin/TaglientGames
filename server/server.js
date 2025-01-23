@@ -40,7 +40,7 @@ async function contact(user_name, user_email, user_message) {
 // API Calls
 app.use(express.json()); // Middleware to parse JSON bodies
 
-app.post("/contact", async (req, res) => {
+app.post("/api/contact", async (req, res) => {
   // Handle preflight requests
   if (req.method === "OPTIONS") {
     return res.status(200).end(); // End preflight request here
