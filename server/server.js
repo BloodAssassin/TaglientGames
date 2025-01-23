@@ -41,13 +41,6 @@ async function contact(user_name, user_email, user_message) {
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/api/contact", async (req, res) => {
-  // res.setHeader(
-  //   "Access-Control-Allow-Origin",
-  //   "https://taglient-games-client.vercel.app"
-  // );
-  // res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  // res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
   // Handle preflight requests
   if (req.method === "OPTIONS") {
     return res.status(200).end(); // End preflight request here
@@ -65,9 +58,9 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Serve the root directory page
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send(
-    "<h1>Welcome to Taglient Games</h1><p>This is the root directory page.</p>"
+    "<h1>Welcome to Taglient Games API</h1><p>This is the api directory page.</p>"
   );
 });
 
