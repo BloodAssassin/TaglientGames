@@ -58,7 +58,7 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Serve the root directory page
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send(
     "<h1>Welcome to Taglient Games API</h1><p>This is the api directory page.</p>"
   );
