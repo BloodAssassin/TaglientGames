@@ -2,7 +2,7 @@
 
 Welcome to **Taglient Games**, our indie game development brand. This repository contains the source code for our official website, showcasing our games, information about our team, and a contact form.  
 
-Link: [https://taglient-games-client.vercel.app](https://taglient-games-client.vercel.app)
+Link: <a href="https://taglient-games-client.vercel.app" target="_blank">https://taglient-games-client.vercel.app</a>
 
 ## Overview  
 The website provides:  
