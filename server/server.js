@@ -64,7 +64,7 @@ app.get("/", (req, res) => {
   );
 });
 
-app.get("/api/contact", async (req, res) => {
+app.get("/contact", async (req, res) => {
   res.send(
     "<h1>API Contact</p>"
   );
