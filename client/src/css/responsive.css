@@ -135,7 +135,12 @@
   .contact-content {
     margin: auto;
     width: 85%;
-    text-align: center;
+    text-align: left;
+  }
+  .message-input{
+    width: 100%;
+    min-width: none;
+    max-width: 100%;
   }
   .input-container {
     flex-direction: column;
@@ -158,22 +163,22 @@
   }
 
   .team-info h1 {
-    font-size: 80%;
+    font-size: 95%;
   }
   .team-info p {
-    font-size: 60%;
+    font-size: 85%;
   }
 
   #milos .team-info {
-    transform: translateY(30px);
+    transform: translateY(0px);
   }
 
   #luka .team-info {
-    transform: translateY(30px);
+    transform: translateY(-15px);
   }
 
   #stefan .team-info {
-    transform: translateY(15px);
+    transform: translateY(-15px);
   }
 
   .footer-links {
