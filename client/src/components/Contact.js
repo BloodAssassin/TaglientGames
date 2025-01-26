@@ -99,7 +99,6 @@ export default function Footer() {
 
         <br />
         <button type="submit">Send</button>
-        {emailError && <p className="error">{emailError}</p>}
       </div>
     </form>
   );
