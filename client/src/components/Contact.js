@@ -6,6 +6,7 @@ export default function Footer() {
   const [user_email, setEmail] = useState("");
   const [user_message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [formError, setFormError] = useState("");
 
   // Expand textarea during input
   const handleInput = (event) => {
@@ -36,6 +37,17 @@ export default function Footer() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Check if all fields are filled
+    if (
+      user_email.length == 0 ||
+      user_email.length == 0 ||
+      user_message.length == 0
+    ) {
+      setFormError("All fields are required");
+      return;
+    }
+
+    // Validate email format
     if (!validateEmail(user_email)) {
       setEmailError("Invalid email format");
       return;
@@ -45,6 +57,7 @@ export default function Footer() {
     setName("");
     setEmail("");
     setMessage("");
+    setFormError("");
 
     // Reset textarea height
     const textarea = document.querySelector(".message-input");
@@ -98,8 +111,14 @@ export default function Footer() {
         ></textarea>
 
         <br />
-        <button type="submit">Send</button>
+        <button
+          type="submit"
+          className={emailError || formError ? "button-disabled" : ""}
+        >
+          Send
+        </button>
         {emailError && <p className="error">{emailError}</p>}
+        {formError && <p className="error">{formError}</p>}
       </div>
     </form>
   );

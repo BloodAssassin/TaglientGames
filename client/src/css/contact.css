@@ -20,7 +20,7 @@
   text-align: left;
 }
 
-.contact-content h1{
+.contact-content h1 {
   text-align: center;
 }
 
@@ -73,6 +73,13 @@
   background-color: white;
   border-color: white;
   color: black;
+}
+
+.contact button.button-disabled {
+  background-color: #555;
+  border-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
 }
 
 .error {
