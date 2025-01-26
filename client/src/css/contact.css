@@ -1,12 +1,10 @@
 .contact {
   background-color: black;
-  text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
   position: relative;
   display: flex;
-  justify-content: center;
 }
 
 .input-container {
@@ -19,6 +17,10 @@
 .contact-content {
   margin: auto;
   width: 800px;
+  text-align: left;
+}
+
+.contact-content h1 {
   text-align: center;
 }
 
@@ -47,8 +49,10 @@
   margin-top: 15px;
   height: 100px;
   min-height: 100px;
+  min-width: 200px;
+  max-width: 90vw;
   width: 100%;
-  resize: vertical;
+  resize: both;
   box-sizing: border-box;
 }
 
@@ -69,4 +73,17 @@
   background-color: white;
   border-color: white;
   color: black;
+}
+
+.contact button.button-disabled {
+  background-color: #555;
+  border-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }

@@ -1,10 +1,15 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
+const cors = require("cors");
 const path = require("path");
 const app = express();
 
 const email = process.env.EMAIL;
 const password = process.env.PASSWORD;
+
+// Enable CORS for all routes
+app.use(cors());
+app.options("*", cors()); // Enable preflight for all routes
 
 async function contact(user_name, user_email, user_message) {
   // Create the message
@@ -41,12 +46,6 @@ async function contact(user_name, user_email, user_message) {
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/contact", async (req, res) => {
-  // Handle preflight requests
-  if (req.method === "OPTIONS") {
-    return res.status(200).end(); // End preflight request here
-  }
-
-  // Handle the post request
   const { user_name, user_email, user_message } = req.body;
   try {
     await contact(user_name, user_email, user_message);
