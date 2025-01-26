@@ -42,9 +42,12 @@ app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/api/contact", async (req, res) => {
   // Handle preflight requests
-  if (req.method === "OPTIONS") {
-    return res.status(200).end(); // End preflight request here
-  }
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Or your specific origin
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    return res.status(204).end(); // No Content
+}
 
   // Handle the post request
   const { user_name, user_email, user_message } = req.body;
