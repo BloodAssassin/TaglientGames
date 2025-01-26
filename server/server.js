@@ -41,7 +41,6 @@ async function contact(user_name, user_email, user_message) {
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post("/api/contact", async (req, res) => {
-  console.log("Received contact form submission");
   // Handle preflight requests
   if (req.method === "OPTIONS") {
     return res.status(200).end(); // End preflight request here
