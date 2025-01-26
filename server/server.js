@@ -53,7 +53,6 @@ app.post("/api/contact", async (req, res) => {
     res.status(200).send("Message sent successfully");
   } catch (error) {
     res.status(500).send("Failed to send message");
-    
     console.log(error.message);
   }
 });

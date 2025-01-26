@@ -1,10 +1,12 @@
 .contact {
   background-color: black;
+  text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
 .input-container {
@@ -49,10 +51,8 @@
   margin-top: 15px;
   height: 100px;
   min-height: 100px;
-  min-width: 200px;
-  max-width: 90vw;
   width: 100%;
-  resize: both;
+  resize: vertical;
   box-sizing: border-box;
 }
 

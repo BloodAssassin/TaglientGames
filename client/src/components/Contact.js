@@ -16,23 +16,6 @@ export default function Footer() {
     setMessage(textarea.value);
   };
 
-  // Validate email format
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  // Handle email input change
-  const handleEmailChange = (e) => {
-    const email = e.target.value;
-    setEmail(email);
-    if (!validateEmail(email) && email.length > 0) {
-      setEmailError("Invalid email format");
-    } else {
-      setEmailError("");
-    }
-  };
-
   // Submit contact form
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -99,7 +82,7 @@ export default function Footer() {
             placeholder="Email"
             className="email-input"
             value={user_email}
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <textarea
@@ -109,16 +92,7 @@ export default function Footer() {
           onInput={handleInput}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-
-        <br />
-        <button
-          type="submit"
-          className={emailError || formError ? "button-disabled" : ""}
-        >
-          Send
-        </button>
-        {emailError && <p className="error">{emailError}</p>}
-        {formError && <p className="error">{formError}</p>}
+        <button type="submit">Send</button>
       </div>
     </form>
   );
