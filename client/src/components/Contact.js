@@ -12,7 +12,7 @@ export default function Footer() {
   const handleInput = (event) => {
     const textarea = event.target;
     textarea.style.height = "auto";
-    textarea.style.height = `${textarea.scrollHeight}px`;
+    textarea.style.height = `${textarea.scrollHeight+20}px`;
     setMessage(textarea.value);
     setFormError(""); // Reset form error on input change
   };

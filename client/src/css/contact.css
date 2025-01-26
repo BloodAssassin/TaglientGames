@@ -48,7 +48,7 @@
 .message-input {
   margin-top: 15px;
   height: 100px;
-  min-height: 100px;
+  min-height: 120px;
   min-width: 200px;
   width: 100%;
   resize: both;
