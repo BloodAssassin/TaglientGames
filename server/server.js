@@ -64,6 +64,12 @@ app.get("/", (req, res) => {
   );
 });
 
+app.get("/api/contact", async (req, res) => {
+  res.send(
+    "<h1>API Contact</p>"
+  );
+});
+
 // Listen for calls
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
