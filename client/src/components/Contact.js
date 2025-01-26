@@ -99,7 +99,7 @@ export default function Footer() {
             placeholder="Email"
             className="email-input"
             value={user_email}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <textarea
