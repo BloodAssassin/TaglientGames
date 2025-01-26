@@ -137,10 +137,6 @@
     width: 85%;
     text-align: center;
   }
-  .message-input {
-    max-width: 100%;
-    width: 100%;
-  }
   .input-container {
     flex-direction: column;
   }
@@ -162,25 +158,23 @@
   }
 
   .team-info h1 {
-    font-size: 4.5vw;
+    font-size: 80%;
   }
   .team-info p {
-    font-size: 3.4vw;
+    font-size: 60%;
   }
 
   #milos .team-info {
-    transform: translateY(10px);
+    transform: translateY(30px);
   }
 
   #luka .team-info {
-    transform: translateY(-5px);
+    transform: translateY(30px);
   }
 
   #stefan .team-info {
-    transform: translateY(-5px);
+    transform: translateY(15px);
   }
-
- 
 
   .footer-links {
     flex-direction: column;
