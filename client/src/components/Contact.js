@@ -39,9 +39,9 @@ export default function Footer() {
 
     // Check if all fields are filled
     if (
-      user_email.length == 0 ||
-      user_email.length == 0 ||
-      user_message.length == 0
+      user_email.length === 0 ||
+      user_email.length === 0 ||
+      user_message.length === 0
     ) {
       setFormError("All fields are required");
       return;
