@@ -14,17 +14,6 @@ export default function Footer() {
     setMessage(textarea.value);
   };
 
-  // Handle email input change
-  const handleEmailChange = (e) => {
-    const email = e.target.value;
-    setEmail(email);
-    if (!validateEmail(email) && email.length > 0) {
-      setEmailError("Invalid email format");
-    } else {
-      setEmailError("");
-    }
-  };
-
   // Submit contact form
   const handleSubmit = async (event) => {
     event.preventDefault();
