@@ -5,6 +5,8 @@ export default function Footer() {
   const [user_name, setName] = useState("");
   const [user_email, setEmail] = useState("");
   const [user_message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [formError, setFormError] = useState("");
 
   // Expand textarea during input
   const handleInput = (event) => {
@@ -14,14 +16,48 @@ export default function Footer() {
     setMessage(textarea.value);
   };
 
+  // Validate email format
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  // Handle email input change
+  const handleEmailChange = (e) => {
+    const email = e.target.value;
+    setEmail(email);
+    if (!validateEmail(email) && email.length > 0) {
+      setEmailError("Invalid email format");
+    } else {
+      setEmailError("");
+    }
+  };
+
   // Submit contact form
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Check if all fields are filled
+    if (
+      user_name.length == 0 ||
+      user_email.length == 0 ||
+      user_message.length == 0
+    ) {
+      setFormError("All fields are required");
+      return;
+    }
+
+    // Validate email format
+    if (!validateEmail(user_email)) {
+      setEmailError("Invalid email format");
+      return;
+    }
 
     // Clear the form
     setName("");
     setEmail("");
     setMessage("");
+    setFormError("");
 
     // Reset textarea height
     const textarea = document.querySelector(".message-input");
@@ -63,7 +99,7 @@ export default function Footer() {
             placeholder="Email"
             className="email-input"
             value={user_email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleEmailChange}
           />
         </div>
         <textarea
@@ -73,7 +109,16 @@ export default function Footer() {
           onInput={handleInput}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit">Send</button>
+
+        <br />
+        <button
+          type="submit"
+          className={emailError || formError ? "button-disabled" : ""}
+        >
+          Send
+        </button>
+        {formError && <p className="error">{formError}</p>}
+        {emailError && <p className="error">{emailError}</p>}
       </div>
     </form>
   );
