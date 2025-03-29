@@ -25,7 +25,7 @@ export default function Content() {
           <div className="platforms">
             <a href="https://bloodassassin89.itch.io/svarog" target="_blank">
               <div className="icon">
-                <img src={itch} alt="itch_logo" /><
+                <img src={itch} alt="itch_logo" />
                 <p>Itch.io</p>
               </div>
             </a>
