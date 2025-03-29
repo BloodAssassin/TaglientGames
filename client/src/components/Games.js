@@ -25,7 +25,7 @@ export default function Content() {
           <div className="platforms">
             <a href="https://bloodassassin89.itch.io/svarog" target="_blank">
               <div className="icon">
-                <img src={itch}></img>
+                <img src={itch} alt="itch_logo" /><
                 <p>Itch.io</p>
               </div>
             </a>
@@ -33,7 +33,7 @@ export default function Content() {
         </div>
       </div>
       <div id="papersharp-container" className="game-container">
-        <img className="game-image" alt="paper-sharp-image" src={paperSharp} />
+        <img className="game-image" alt="paper_sharp_image" src={paperSharp} />
         <div className="game-info">
           <h2 className="game-title">Paper Sharp</h2>
           <p className="game-desc">
@@ -52,7 +52,7 @@ export default function Content() {
               target="_blank"
             >
               <div className="icon">
-                <img src={itch}></img>
+                <img src={itch} alt="itch_logo"></img>
                 <p>Itch.io</p>
               </div>
             </a>

@@ -24,7 +24,7 @@ export default function Gameplay() {
         </video>
       </div>
       <div className="index-content">
-        <img src={logo} alt="Taglient Games Logo" />
+        <img src={logo} alt="Taglient_Games_Logo" />
         <p className="index-text">
           We are a game development studio that puts{" "}
           <b className="highlight">ART</b> first!

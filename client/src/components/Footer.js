@@ -33,7 +33,7 @@ export default function Footer() {
             Contact
           </a>
         </div>
-        <img src={logo} />
+        <img src={logo} alt="Taglient_Games_Logo"/>
         <p>www.taglientgames.com</p>
         <p>
           This website is managed by a team of individuals and is not affiliated

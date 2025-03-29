@@ -41,7 +41,7 @@ export default function Navigation() {
   return (
     <nav className="navigation">
       <a href="#" onClick={handleLinkClick}>
-        <img src={logo} alt="Taglient Games Logo" className="logo" />
+        <img src={logo} alt="Taglient_Games_Logo" className="logo" />
       </a>
       <HamburgerMenu />
       <ul className="nav-links">
