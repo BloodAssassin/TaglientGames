@@ -16,7 +16,7 @@ import "./css/responsive.css";
 function App() {
   return (
     <div className="App">
-        <Helmet>
+      <Helmet>
         <title>Taglient Games</title>
         <meta name="description" content="Indie game development studio." />
         <meta property="og:site_name" content="Taglient Games" />
