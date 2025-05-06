@@ -1,11 +1,16 @@
 
 
-
+/* @media (min-width: 1208px) {
+  .about {
+    background-attachment: fixed;
+  }
+} */
 
 @media (max-width: 1207px) {
   /*********/
   /* About */
   /*********/
+
   .about img {
     width: 300px;
   }
