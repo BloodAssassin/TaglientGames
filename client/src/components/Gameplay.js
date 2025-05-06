@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/gameplay.css";
 import logo from "../images/Logo/TaglientGamesLogo.png";
 
 export default function Gameplay() {
+  const [scrollY, setScrollY] = useState(0);
+
   const handleLinkClick = (event) => {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href").substring(1);
@@ -12,9 +14,26 @@ export default function Gameplay() {
     }
   };
 
+  const handleScroll = () => {
+    setScrollY(window.scrollY); // Track the vertical scroll position
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll); // Add scroll event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Clean up event listener
+    };
+  }, []);
+
+  // Apply the parallax effect using the scroll position
+  const parallaxStyle = {
+    transform: `translateY(${scrollY * 0.4}px)`,
+    transition: "transform 0.01s ease-out",
+  };
+
   return (
     <div>
-      <div className="video-container">
+      <div className="video-container" style={parallaxStyle}>
         <video autoPlay loop muted playsInline className="background-video">
           <source
             src={require("../videos/RiverSpirit Entrance.mp4")}

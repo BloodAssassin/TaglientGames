@@ -10,12 +10,27 @@
   padding: 40px;
 }
 
+/* Fixed background image */
 .about {
+  position: relative;
   background-image: url("../images/Team/Founders.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
-  position: relative;
+  background-position: center;
+  z-index: 1; 
+}
+
+/* Dark overlay over background image */
+.about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
 }
 
 .about::before {

@@ -13,7 +13,7 @@ export default function Navigation() {
       const hamburgerVisibility = window.getComputedStyle(hamburger).visibility;
       const scrollTop = document.documentElement.scrollTop;
 
-      if (scrollTop < 50) {
+      if (scrollTop < 200) {
         navbar.style.top = "0";
       } else if (hamburgerVisibility === "hidden") {
         navbar.style.top = "-100px";
