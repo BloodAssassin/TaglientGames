@@ -41,12 +41,22 @@ a {
 
 #svarog-container {
   background-image: url("../images/Svarog/RiverSpiritEntrance.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
+  z-index: 1; 
 }
 
 #papersharp-container {
   background-image: url("../images/PaperSharp/Workshop.jpg");
-  background-position: center bottom;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1; 
 }
 
 .game-container::before {
