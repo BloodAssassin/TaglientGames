@@ -16,6 +16,9 @@ export default function Footer() {
     }
   };
 
+  // Get current year for copyright date
+  const currentYear = new Date().getFullYear();
+
   return (
     <nav className="footer">
       <div className="footer-content">
@@ -43,7 +46,7 @@ export default function Footer() {
       <div className="company">
         Location: Serbia <br />
         <br />
-        Taglient Games © 2025
+        Taglient Games © {currentYear}
       </div>
     </nav>
   );
